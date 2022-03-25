@@ -214,11 +214,11 @@ const array = [
 // const newArray = _.sortBy(array, ["matchType": "Identical"]);
 
 
-// const customSort = function(key){
-//     return (a,b) => (a[key]>b[key]) ? 1 : (b[key]>a[key]) ? -1 : 0;
-// };
-// const newArray = array.sort(customSort('score'));
+const customSort = function(key){
+    return (a,b) => (a[key]>b[key]) ? 1 : (b[key]>a[key]) ? -1 : 0;
+};
+const newArray = array.sort(customSort('score'));
 
-const newArray = _.sortBy(array,'matchType');
+// const newArray = _.sortBy(array,'matchType');
 
 console.log(newArray);
